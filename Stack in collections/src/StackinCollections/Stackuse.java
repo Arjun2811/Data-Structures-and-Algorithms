@@ -20,5 +20,6 @@ public class Stackuse {
         }
         System.out.println();
     }
+    
 
 }
