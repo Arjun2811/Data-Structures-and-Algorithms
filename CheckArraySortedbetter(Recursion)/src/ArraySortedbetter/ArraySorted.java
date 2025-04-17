@@ -19,7 +19,7 @@ if(arr[startindex]>arr[startindex+1])
 return smallans;
 }
 // star point2 written in notebook for this question
-private static boolean ArraySorted(int[]arr)
+public static boolean ArraySorted(int[]arr)
 {
 
 return ArraySorted(arr,0);

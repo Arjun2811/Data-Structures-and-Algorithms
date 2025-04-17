@@ -76,7 +76,7 @@ return head;
     {
         Node<Integer>head=takeinput();
         print(head);
-        Node<Integer>Head=Deletion(head,0);
+        Node<Integer>Head=Deletion(head,2);
         print(Head);
     }
 }
