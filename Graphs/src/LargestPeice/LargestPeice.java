@@ -13,19 +13,24 @@ public static int Largest(int[][]arr,int i,int j,boolean visited[][],int consti,
     int newj[]={1,0,0,-1};
 visited[i][j]=true;
     int f=0;
+    
     while(f<4)
     {
        
     if(i+newi[f]>=0&&i+newi[f]<arr.length&&j+newj[f]>=0&&j+newj[f]<arr[0].length&&arr[i+newi[f]][j+newj[f]]==1&&visited[i+newi[f]][j+newj[f]]==false)
     {
-       int ans= Largest(arr,i+newi[f],j+newj[f],visited ,consti,constj,count+1);
-       visited[i][j]=false;
-       return ans;
+        
+      int ans = Largest(arr,i+newi[f],j+newj[f],visited ,consti,constj,count+1);
+      if(f==2)
+      {
+        return ans;
+      }
+   
 
     }
     f++;
     }
-visited[i][j]=false;
+
 return count;
 
 
@@ -64,7 +69,7 @@ return 0;
     public static void main(String[]args)
     {Scanner s = new Scanner(System.in);
 int n=s.nextInt();
-String []edge={"100","010","010"};
+String []edge={"11","01"};
 int [][]arr=new int[n][edge[0].length()];
 int i=0;
 while(i<edge.length)
